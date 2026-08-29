@@ -1,10 +1,10 @@
-================================================================================
+
                     GPS-DISCIPLINED FREQUENCY COUNTER
                            ESP32-P4 IMPLEMENTATION
-================================================================================
+
 
 PROJECT OVERVIEW
-================================================================================
+================
 
 This document describes the design and operation of a high-precision,
 GPS-disciplined frequency counter built around the ESP32-P4 microcontroller.
@@ -22,7 +22,7 @@ Key Specifications:
 
 
 HARDWARE ARCHITECTURE
-================================================================================
+====================
 
 1. Main Controller: ESP32-P4
    - 360 MHz RISC-V dual-core CPU
@@ -44,7 +44,7 @@ HARDWARE ARCHITECTURE
 
 
 PIN ASSIGNMENTS
-================================================================================
+===============
 
 GPIO  | Function           | Description
 ------|--------------------|--------------------------------
@@ -63,7 +63,7 @@ GPIO41| GPS TX (UART)      | Configuration to GPS
 
 
 OPERATING PRINCIPLES
-================================================================================
+====================
 
 1. TIME-BASE: 1PPS FROM GPS
    -------------------------
@@ -131,7 +131,7 @@ OPERATING PRINCIPLES
 
 
 DISPLAY MODES
-================================================================================
+=============
 
 1. COUNTER MODE (Default)
    -----------------------
@@ -176,7 +176,7 @@ DISPLAY MODES
 
 
 BUTTON OPERATION
-================================================================================
+================
 
 Button     Short Press          Long Press (Hold)
 ─────────────────────────────────────────────────────────────────────
@@ -190,7 +190,7 @@ DOWN       -1 Hz                Accelerating: 1 → 5 → 10 → 50 → 100 Hz
 
 
 KEY CODE SECTIONS
-================================================================================
+=================
 
 1. 64-Bit CPU Cycle Counter (Inline Assembly)
    -------------------------------------------
@@ -258,7 +258,7 @@ KEY CODE SECTIONS
 
 
 TROUBLESHOOTING
-================================================================================
+===============
 
 1. No Display
    -----------
@@ -293,7 +293,7 @@ TROUBLESHOOTING
 
 
 SPECIFICATIONS SUMMARY
-================================================================================
+======================
 
 Parameter                Value
 ─────────────────────────────────────────────────────────────────
@@ -307,9 +307,8 @@ Power Supply            3.3V (USB or external)
 Modes                   Counter, Crystal Tuner
 Accuracy                GPS-disciplined (< 0.001 PPM with averaging)
 GPS Module              NEO-6M, NEO-M8N, or MAX-M10S
-================================================================================
+
 
     Author: ESP32-P4 GPS-Disciplined Frequency Counter Project
     Date: August 2026
     Version: 1.0
-================================================================================
