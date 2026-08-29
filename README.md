@@ -70,6 +70,7 @@ OPERATING PRINCIPLES
    The GPS 1PPS signal provides an atomic-clock-referenced 1-second gate.
    Each rising edge is exactly 1 second apart (within GPS jitter of ~50 ns).
 
+
    ────┐     ┌────┐     ┌────┐     ┌────
    
        │     │    │     │    │     │
