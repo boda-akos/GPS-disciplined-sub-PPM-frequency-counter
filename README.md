@@ -71,14 +71,17 @@ OPERATING PRINCIPLES
    Each rising edge is exactly 1 second apart (within GPS jitter of ~50 ns).
 
    ────┐     ┌────┐     ┌────┐     ┌────
+   
        │     │    │     │    │     │
+   
        └─────┘    └─────┘    └─────┘
+   
        ^          ^          ^
        │          │          │
     START      STOP       START
     (1 sec)    (1 sec)    (1 sec)
 
-2. PULSE COUNTING: PCNT + 64-BIT OVERFLOW
+3. PULSE COUNTING: PCNT + 64-BIT OVERFLOW
    ---------------------------------------
    The PCNT (Pulse Counter) peripheral counts pulses on GPIO3 in hardware.
    It is a 16-bit counter that overflows at ACCUMULATE_LIMIT (32,760).
@@ -97,7 +100,7 @@ OPERATING PRINCIPLES
    current_hf_raw       = 18,880
    Total Pulses         = 11,059,000 ✓
 
-3. TIME MEASUREMENT: 64-BIT CPU CYCLE COUNTER
+4. TIME MEASUREMENT: 64-BIT CPU CYCLE COUNTER
    -------------------------------------------
    The CPU cycle counter (read_mcycle_64) provides 2.78 ns resolution
    by reading the 64-bit RISC-V cycle counter register.
@@ -109,7 +112,7 @@ OPERATING PRINCIPLES
    read_mcycle_64()       2.78 ns        1,624 years
    ─────────────────────────────────────────────────────────────────
 
-4. THE MEASUREMENT SEQUENCE
+5. THE MEASUREMENT SEQUENCE
    -------------------------
    a. 1PPS rising edge: START
       - Record CPU cycle count (start_cycles)
