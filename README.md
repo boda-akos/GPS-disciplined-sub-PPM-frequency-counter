@@ -9,7 +9,7 @@ PROJECT OVERVIEW
 This document describes the design and operation of a high-precision,
 GPS-disciplined frequency counter built around the ESP32-P4 microcontroller.
 The instrument measures frequencies from 1 Hz to approximately 40 MHz with
-sub-PPM accuracy by using a GPS 1PPS (Pulse Per Second) signal as the
+sub-PPM (up to 0.001 PPM) accuracy by using a GPS 1PPS (Pulse Per Second) signal as the
 time reference.
 
 Key Specifications:
