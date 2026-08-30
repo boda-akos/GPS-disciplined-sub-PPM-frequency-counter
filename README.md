@@ -1,3 +1,8 @@
+The counter is a GPS-disciplined instrument with atomic accuracy, measuring frequency with sub-ppm precision across the 1 Hz to 40 MHz range. The instrument can be used to fine tune quartz oscillators.
+
+Upon startup, the ESP32-P4 operates in counter mode: it opens a counter gate for one second and counts the incoming pulses. This count, which represents the frequency, is displayed in hertz on the TFT. The accuracy and granularity of this method are enhanced in the second mode, known as tuning mode. The rough count is known already, and the user can modify this up or down to set up the target frequency for the tuning.  In this mode, the time gap between the edge of the last incoming pulse and the 1 PPS pulse is measured using the highest possible frequency of 360 MHz. Since the resolution of this measurement is 2.8 ns, the main factor limiting accuracy is the GPS 1PPS jitter, which ranges from 20 ns to 50 ns. However, by averaging the count and compensating for jitter imperfections over a longer period, the error is effectively eliminated statistically, resulting in practically atomic accuracy.
+
+ The project has been developed with extensive AI support from Google and DeepSeek. (The ESP32-P4 hardware manual, which is 3,707 pages long, is no longer intended for human reading.)
 
                     GPS-DISCIPLINED FREQUENCY COUNTER
                            ESP32-P4 IMPLEMENTATION
